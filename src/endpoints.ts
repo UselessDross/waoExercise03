@@ -1,10 +1,10 @@
 // middle-were: [  index  ]--<#>[  router-controlls  ]--<#>[> endpoints <]--<#>[  order  ]
 import { Request, Response } from "express";
 import { schema } from "./model/order";
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 
-const connection = mongoose.createConnection('mongodb://localhost:27017/')
+const connection = mongoose.createConnection('mongodb://mongodb:27017/')
 export const model = connection.model('Orders', schema)
 
 
